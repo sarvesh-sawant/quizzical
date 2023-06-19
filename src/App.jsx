@@ -9,6 +9,12 @@ function App() {
   const [ quizStarted, setQuizStarted ] = useState(false)
 
   const [ quizArr, setQuizArr ] = useState([])
+
+  function handleSetQuizStarted(){
+    setQuizStarted(false)
+  }
+
+  
   
   useEffect(() => {
       fetch("https://opentdb.com/api.php?amount=5&category=18&type=multiple")
@@ -37,7 +43,7 @@ function App() {
   return (
     <>
       {!quizStarted && <Initial setQuizStarted={setQuizStarted}/>}
-      {quizStarted && <Quiz quizArr={quizArr}/>}
+      {quizStarted && <Quiz quizArr={quizArr} handleSetQuizStarted={handleSetQuizStarted}/>}
     </>
   )
 }

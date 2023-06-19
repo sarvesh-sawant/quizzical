@@ -31,6 +31,7 @@ body {
   border-radius: 0.75em;
   margin-top: 2em;
   font-family: 'Roboto', sans-serif;
+  cursor: pointer;
 }
 
 .intial-page-container-heading, .intial-page-container-description {
@@ -76,7 +77,7 @@ input[type="radio"]{
   color: #293264;
 }
 
-.check-answer-btn{
+.btn-blue{
   padding: 0.8em 2em;
   margin-bottom: 2em;
   align-self: center;
@@ -92,12 +93,40 @@ input[type="radio"]{
   margin: 1em auto;
 }
 
-input[type="radio"]:checked+label{
+
+input[type="radio"]:hover+label, .btn-blue{
+  cursor: pointer;
+}
+
+.play-again-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.play-again-btn {
+  margin-left: 2em;
+}
+
+.play-again-container-correct-answers {
+  color: #293264;
+}
+
+.correct-answer {
+  background-color: #94D7A2;
+}
+
+.incorrect-answer{
+  background-color: #F8BCBC;
+}
+
+.selected-btn {
   background-color: #D6DBF5;
 }
 
-input[type="radio"]:hover+label, .check-answer-btn{
-  cursor: pointer;
+.not-selected{
+  background-color: #EEEEEE;
+  border: none;
 }
 
 @media (min-width: 700px){
